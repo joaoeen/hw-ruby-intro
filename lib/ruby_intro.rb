@@ -23,7 +23,14 @@ def max_2_sum(arr)
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  arr.each do |value_1| 
+    arr.each do |value_2|
+      if value_1+value_2 == n and value_1!=value_2
+        return true
+      end
+    end
+  end
+  return false
 end
 
 # Part 2
