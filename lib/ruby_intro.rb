@@ -48,7 +48,16 @@ def starts_with_consonant? s
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  if ((/[^01]/ =~ s)!=nil)
+    return false
+  end
+  i = s.length
+  if i < 3 && ((/[^0]/ =~ s)!=nil)
+    return false
+  elsif (s[i-1] == '0' && s[i-2] == '0')
+    return true
+  end
+  return false  
 end
 
 # Part 3
